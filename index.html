@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyro Bowl - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="wave-1"></div>
+        <div class="wave-2"></div>
+        <div class="wave-3"></div>
+        <div class="wave-4"></div>
+        <div class="wave-5"></div>
+        <div class="music-control">
+            <button id="musicToggle" class="music-toggle">
+                <span class="music-icon">🎵</span>
+            </button>
+        </div>
+        <audio id="bgMusic" preload="auto" loop>
+            <source src="audio/mediterranean-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <nav>
+            <div class="logo">GYRO BOWL</div>
+        </nav>
+        <div class="hero-content">
+            <h1>A New Mediterranean Experience</h1>
+            <p class="tagline">Where tradition meets innovation</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+            <div class="cta">
+                <form class="notify-form" id="notify-form">
+                    <input type="email" placeholder="Enter your email for updates" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <span class="icon">🌿</span>
+                    <span class="text">Fresh Ingredients</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">👨‍🍳</span>
+                    <span class="text">Authentic Recipes</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">🏺</span>
+                    <span class="text">Modern Twist</span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="social-links">
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+            <p class="location">29907 Jordan Crossing Blvd, Brookshire, TX 77423</p>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/music.js"></script>
+</body>
+</html> 

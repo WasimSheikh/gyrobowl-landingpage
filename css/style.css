@@ -1,0 +1,436 @@
+:root {
+    --primary: #C3933F;
+    --secondary: #2A3342;
+    --accent: #8B4513;
+    --light: #F5F5F5;
+    --dark: #1A1A1A;
+    --gold: #DAA520;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amiri', 'Poppins', sans-serif;
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.65)
+    ),
+    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMTk1LDE0Nyw2MywwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+');
+    z-index: 1;
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.logo {
+    font-family: 'Amiri', 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Amiri', 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+h1::before, h1::after {
+    content: '❖';
+    color: var(--gold);
+    font-size: 2rem;
+    margin: 0 1rem;
+    opacity: 0.8;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: var(--gold);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Amiri', sans-serif;
+}
+
+.countdown {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item span {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--gold);
+    font-family: 'Amiri', sans-serif;
+}
+
+.countdown-item .label {
+    font-size: 1rem;
+    color: var(--light);
+}
+
+.notify-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.notify-form input {
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    min-width: 300px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.notify-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(195, 147, 63, 0.3);
+}
+
+.notify-form button {
+    padding: 1rem 2rem;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--gold);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notify-form button:hover {
+    background: var(--gold);
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+.features {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature .icon {
+    font-size: 2.5rem;
+}
+
+.feature .text {
+    font-size: 1.1rem;
+    color: var(--light);
+}
+
+footer {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover::after {
+    transform: scaleX(1);
+}
+
+.location {
+    color: var(--gold);
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-family: 'Amiri', sans-serif;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .countdown {
+        gap: 1rem;
+    }
+
+    .countdown-item span {
+        font-size: 2rem;
+    }
+
+    .notify-form {
+        flex-direction: column;
+    }
+
+    .notify-form input {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Aromatic waves animation */
+@keyframes waveRise {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-80px) scaleX(1.1);
+        opacity: 0.65;
+    }
+    70% {
+        transform: translateY(-160px) scaleX(0.9);
+        opacity: 0.45;
+    }
+    100% {
+        transform: translateY(-200px) scaleX(0.8);
+        opacity: 0;
+    }
+}
+
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.45) 0%, rgba(255,248,220,0.2) 50%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 2;
+    animation: waveRise 3s infinite ease-in-out;
+    transform-origin: center bottom;
+    mix-blend-mode: soft-light;
+}
+
+.hero::after {
+    left: 40%;
+    animation-delay: 1.5s;
+    width: 80px;
+    height: 80px;
+}
+
+.hero .wave-1,
+.hero .wave-2,
+.hero .wave-3 {
+    position: absolute;
+    bottom: 35%;
+    left: 45%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,248,220,0.25) 50%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 2;
+    animation: waveRise 3.5s infinite ease-in-out;
+    transform-origin: center bottom;
+    mix-blend-mode: soft-light;
+}
+
+.hero .wave-2 {
+    left: 55%;
+    animation-delay: 0.75s;
+    width: 70px;
+    height: 70px;
+}
+
+.hero .wave-3 {
+    left: 48%;
+    animation-delay: 2s;
+    width: 50px;
+    height: 50px;
+}
+
+/* Add more waves for continuous effect */
+.hero .wave-4,
+.hero .wave-5 {
+    position: absolute;
+    bottom: 32%;
+    left: 52%;
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,248,220,0.2) 50%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 2;
+    animation: waveRise 4s infinite ease-in-out;
+    transform-origin: center bottom;
+    mix-blend-mode: soft-light;
+}
+
+.hero .wave-5 {
+    left: 43%;
+    animation-delay: 2.5s;
+    width: 55px;
+    height: 55px;
+}
+
+/* Music Control Styles */
+.music-control {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.music-toggle {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.music-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, var(--gold) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.music-toggle:hover::before {
+    opacity: 0.2;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+}
+
+.music-toggle.playing {
+    background: rgba(218, 165, 32, 0.2);
+}
+
+.music-icon {
+    color: var(--gold);
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .music-control {
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .music-toggle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .music-icon {
+        font-size: 1.2rem;
+    }
+} 
